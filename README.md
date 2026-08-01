@@ -1,23 +1,55 @@
 # 🚦 Traffic Light Simulation using Arduino Uno
 
-This project is a smart traffic light simulation built with **Arduino**, featuring both circuit simulation and hardware layout.
+A complete and professional smart traffic light system simulation built using **Arduino Uno**, combining hardware schematic validation and interactive browser-based simulation.
 
-## 🛠️ Tools Used:
-- **Wokwi Simulator:** For online interactive circuit testing.
-- **Proteus Professional:** For hardware schematic validation.
+---
 
-## 🚀 Live Demo (Wokwi)
-You can run and test the simulation live directly in your browser:
-👉 [Click here to view the live Wokwi simulation](https://wokwi.com/projects/471183359139706881)
+## 🛠️ Project Overview
+This project demonstrates a timed traffic light controller implemented in C++ for Arduino. It sequences through Red, Yellow, and Green lights with precise timing delays, mimicking a real-world intersection traffic signal.
 
-## 📸 Project Screenshots:
+### Tools & Technologies Used:
+* **Arduino IDE / C++:** For writing and compiling the microcontroller code.
+* **Wokwi Simulator:** For real-time, browser-based hardware simulation.
+* **Proteus Professional:** For advanced schematic layout and electronic validation.
 
-### 1. Proteus Circuit Design:
-![Proteus Simulation](proteus-circuit.png)
+---
 
-### 2. Wokwi Live Simulation:
-![Wokwi Simulation](wokwi-simulation.png)
+## 📂 Project Repository Files
+* `sketch.ino` - The core Arduino C++ source code.
+* `diagram.json` - Wokwi wiring configuration layout.
+* `proteus-circuit.png` - Circuit schematic visualization from Proteus.
+* `wokwi-simulation.png` - Live execution screenshot from the Wokwi simulator.
 
-## 📂 Project Files:
-- `sketch.ino`: The Arduino C++ source code.
-- `diagram.json`: Wokwi hardware connections layout.
+---
+
+## 💻 Arduino Source Code (`sketch.ino`)
+```cpp
+const int redPin = 10;
+const int yellowPin = 9;
+const int greenPin = 8;
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(yellowPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+}
+
+void loop() {
+  // Red Light ON for 3 seconds
+  digitalWrite(redPin, HIGH);
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(greenPin, LOW);
+  delay(3000);
+
+  // Yellow Light ON for 1 second
+  digitalWrite(redPin, LOW);
+  digitalWrite(yellowPin, HIGH);
+  digitalWrite(greenPin, LOW);
+  delay(1000);
+
+  // Green Light ON for 3 seconds
+  digitalWrite(redPin, LOW);
+  digitalWrite(yellowPin, LOW);
+  digitalWrite(greenPin, HIGH);
+  delay(3000);
+}
