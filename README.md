@@ -25,10 +25,10 @@ You can test and run the live circuit instantly in your browser:
 ## 📸 Circuit & Simulation Visualizations
 
 ### 1. Proteus Hardware Design
-![Proteus Circuit Simulation](proteus-circuit.png)
+![Proteus Circuit Simulation](proteus-circuit.png.PNG)
 
 ### 2. Wokwi Live Simulation
-![Wokwi Live Simulation](wokwi-simulation.png)
+![Wokwi Live Simulation](wokwi-simulation.png.PNG)
 
 ---
 
