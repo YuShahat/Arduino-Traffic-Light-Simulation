@@ -38,5 +38,3 @@ You can test and run the live circuit instantly in your browser:
 - `proteus-circuit.png`: Screenshot of the Proteus schematic layout.
 - `wokwi-simulation.png`: Screenshot of the live web simulation.
 
----
-*Developed with 💡 by Youssef*
