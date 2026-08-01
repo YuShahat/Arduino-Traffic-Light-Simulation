@@ -1,55 +1,42 @@
-# 🚦 Traffic Light Simulation using Arduino Uno
+# 🚦 Smart Traffic Light Simulation Using Arduino Uno
 
-A complete and professional smart traffic light system simulation built using **Arduino Uno**, combining hardware schematic validation and interactive browser-based simulation.
-
----
-
-## 🛠️ Project Overview
-This project demonstrates a timed traffic light controller implemented in C++ for Arduino. It sequences through Red, Yellow, and Green lights with precise timing delays, mimicking a real-world intersection traffic signal.
-
-### Tools & Technologies Used:
-* **Arduino IDE / C++:** For writing and compiling the microcontroller code.
-* **Wokwi Simulator:** For real-time, browser-based hardware simulation.
-* **Proteus Professional:** For advanced schematic layout and electronic validation.
+A complete micro-controller traffic light project featuring both hardware circuit design and interactive browser-based simulation.
 
 ---
 
-## 📂 Project Repository Files
-* `sketch.ino` - The core Arduino C++ source code.
-* `diagram.json` - Wokwi wiring configuration layout.
-* `proteus-circuit.png` - Circuit schematic visualization from Proteus.
-* `wokwi-simulation.png` - Live execution screenshot from the Wokwi simulator.
+## 📌 Project Overview
+This project implements a classic 3-phase traffic light controller (Red, Yellow, Green) using an **Arduino Uno**. It cycles through states with precise delays to simulate a real-world intersection traffic signal.
 
 ---
 
-## 💻 Arduino Source Code (`sketch.ino`)
-```cpp
-const int redPin = 10;
-const int yellowPin = 9;
-const int greenPin = 8;
+## 🛠️ Tools & Technologies
+- **Arduino Uno & C++:** Core logic and microcontroller programming.
+- **Proteus Professional:** Schematic capture and hardware simulation.
+- **Wokwi Simulator:** Instant browser-based interactive testing.
 
-void setup() {
-  pinMode(redPin, OUTPUT);
-  pinMode(yellowPin, OUTPUT);
-  pinMode(greenPin, OUTPUT);
-}
+---
 
-void loop() {
-  // Red Light ON for 3 seconds
-  digitalWrite(redPin, HIGH);
-  digitalWrite(yellowPin, LOW);
-  digitalWrite(greenPin, LOW);
-  delay(3000);
+## 🚀 Live Demo (Wokwi)
+You can test and run the live circuit instantly in your browser:
+👉 **[Click Here to Open Live Wokwi Simulation](https://wokwi.com/projects/471183359139706881)**
 
-  // Yellow Light ON for 1 second
-  digitalWrite(redPin, LOW);
-  digitalWrite(yellowPin, HIGH);
-  digitalWrite(greenPin, LOW);
-  delay(1000);
+---
 
-  // Green Light ON for 3 seconds
-  digitalWrite(redPin, LOW);
-  digitalWrite(yellowPin, LOW);
-  digitalWrite(greenPin, HIGH);
-  delay(3000);
-}
+## 📸 Circuit & Simulation Visualizations
+
+### 1. Proteus Hardware Design
+![Proteus Circuit Simulation](proteus-circuit.png)
+
+### 2. Wokwi Live Simulation
+![Wokwi Live Simulation](wokwi-simulation.png)
+
+---
+
+## 📂 Repository Files
+- `sketch.ino`: The source code written in Arduino C++.
+- `diagram.json`: Circuit wiring layout configuration for Wokwi.
+- `proteus-circuit.png`: Screenshot of the Proteus schematic layout.
+- `wokwi-simulation.png`: Screenshot of the live web simulation.
+
+---
+*Developed with 💡 by Youssef*
